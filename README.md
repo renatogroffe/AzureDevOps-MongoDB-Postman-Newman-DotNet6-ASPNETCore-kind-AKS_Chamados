@@ -1,5 +1,5 @@
 # AzureDevOps-MongoDB-Postman-Newman-DotNet6-ASPNETCore-kind-AKS_Chamados
-Pipeline do Azure DevOps para automação de testes (com Postman + Newman) utilizando SQL Server + Migrations do Entity Framework Core, build e deployment no Azure Kubernetes Service (AKS) de uma API REST criada com .NET 6 + ASP.NET Core. Inclui a geração de relatório HTML e de XML (JUnit) com o resultados dos testes.
+Pipeline do Azure DevOps para automação de testes (com Postman + Newman) utilizando MongoDB, build e deployment no Azure Kubernetes Service (AKS) de uma API REST criada com .NET 6 + ASP.NET Core. Inclui a geração de relatório HTML e de XML (JUnit) com o resultados dos testes, além da criação de um ambiente baseado em um cluster Kubernetes local com kind.
 
 Projeto que serviu de base para a elaboração deste pipeline:
 
