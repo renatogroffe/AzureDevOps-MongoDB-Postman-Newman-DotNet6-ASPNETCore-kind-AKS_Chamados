@@ -1,0 +1,29 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: apisuportemongodb 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apisuportemongodb
+  template:
+    metadata:
+      labels:
+        app: apisuportemongodb 
+    spec:
+      containers:
+        - name: apisuportemongodb 
+          image: resource.azurecr.io/apisuportemongodb
+          env:
+          - name: ConnectionStrings__MongoDB
+            valueFrom:
+              secretKeyRef:
+                name: apisuportesecret
+                key: ConnectionMongoDB
+          - name: MongoDB__Database
+            value: DBChamadosProd
+          - name: MongoDB__Collection
+            value: ChamadosSuporteProd
+          ports:
+          - containerPort: 80
