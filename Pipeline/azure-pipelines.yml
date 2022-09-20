@@ -62,6 +62,10 @@ stages:
         kind
         cd $(Path_YAMLIntegrationTests)
         kind create cluster --name kind-01 --config=kind-cluster-config-automation-env.yaml
+        echo ' '
+        echo 'Cluster Kubernetes local em funcionamento...'
+        echo ' '
+        kubectl get services
       displayName: Criar cluster Kubernetes local com kind
     - script: docker container ls
       displayName: Exibir containers em execução
